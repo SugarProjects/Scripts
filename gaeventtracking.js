@@ -20,7 +20,6 @@ document.addEventListener('click', function (event) {
 		|| event.target.matches('a[href^="tel:"]') // tel: function
 		|| event.target.matches('a[href$=".pdf"]') // pdf function
     ) {
-	    console.log(event);
 	    ga_track_outbound_link(event);
 	    return true;
     }
