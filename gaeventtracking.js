@@ -6,11 +6,10 @@ function ga_track_outbound_link(event) {
         console.warn('Href cannot be null.');
         return;
     }
-    ga('send', {
-        hitType: 'event',
-        eventCategory: 'Outbound Link',
-        eventAction: 'click',
-        eventLabel: href
+    gtag('event', 'cta_clicked', {
+       'event_category': 'Outbound Link',
+       'event_label': href,
+       'value': 1
     });
 }
 
